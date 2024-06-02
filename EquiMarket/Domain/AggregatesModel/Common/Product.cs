@@ -1,6 +1,6 @@
-﻿using Domain.ProducerModel;
+﻿using Domain.AggregatesModel.ProducerModel;
 
-namespace Domain.Common;
+namespace Domain.AggregatesModel.Common;
 
 public class Product : Entity
 {

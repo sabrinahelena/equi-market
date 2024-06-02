@@ -1,12 +1,12 @@
-﻿using Domain.Common;
-using Domain.ConsumerModel;
-using Domain.ProducerModel;
-using Domain.Repositories;
-using Domain.UserModel;
+﻿using Domain.AggregatesModel.Common;
+using Domain.AggregatesModel.CostumerModel;
+using Domain.AggregatesModel.ProducerModel;
+using Domain.AggregatesModel.UserModel;
+using Domain.Infraestructure;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
-namespace Infraestructure.EntityFramework;
+namespace Infraestructure.EntityFramework.Context;
 
 public class EquiMarketContext : DbContext, IEquiMarketContext
 {
@@ -29,7 +29,10 @@ public class EquiMarketContext : DbContext, IEquiMarketContext
     public DbSet<Product> Products { get; set; }
     public DbSet<Transaction> Transactions { get; set; }
     public DbSet<Review> Reviews { get; set; }
-
+    public async Task<bool> CommitAsync(CancellationToken cancellationToken = default)
+    {
+        return await base.SaveChangesAsync(cancellationToken) > 0;
+    }
     public void AttachAndUpdate<TEntity>(TEntity entity) where TEntity : class
     {
         Attach(entity);

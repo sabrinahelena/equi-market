@@ -1,6 +1,6 @@
-﻿using Domain.Common;
+﻿using Domain.AggregatesModel.Common;
 
-namespace Domain.UserModel;
+namespace Domain.AggregatesModel.UserModel;
 
 public class User : Entity
 {

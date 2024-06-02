@@ -1,7 +1,6 @@
-﻿using Domain.ProducerModel;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
-using Domain.Common;
+using Domain.AggregatesModel.Common;
 
 namespace Infraestructure.EntityFramework.Configuration;
 
