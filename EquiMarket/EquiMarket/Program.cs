@@ -1,5 +1,4 @@
-
-using Infraestructure.EntityFramework;
+using Infraestructure.EntityFramework.Context;
 using Microsoft.EntityFrameworkCore;
 
 namespace EquiMarket

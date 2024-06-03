@@ -1,4 +1,4 @@
-﻿using Domain.UserModel;
+﻿using Domain.AggregatesModel.UserModel;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

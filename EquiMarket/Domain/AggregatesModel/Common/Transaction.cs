@@ -1,12 +1,12 @@
-﻿using Domain.ConsumerModel;
+﻿using Domain.AggregatesModel.CostumerModel;
 
-namespace Domain.Common;
+namespace Domain.AggregatesModel.Common;
 
 public class Transaction : Entity
 {
     public int CostumerId { get; init; }
     public int ProductId { get; init; }
-    public int PaymentStatus { get; init; }
+    public int? PaymentStatus { get; init; }
     public int PaymentType { get; init; }
     public DateTime CreatedAt { get; init; }
     public DateTime FinishedAt { get; init; }

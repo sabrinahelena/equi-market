@@ -1,7 +1,7 @@
-﻿using Domain.Common;
-using Domain.UserModel;
+﻿using Domain.AggregatesModel.Common;
+using Domain.AggregatesModel.UserModel;
 
-namespace Domain.ProducerModel;
+namespace Domain.AggregatesModel.ProducerModel;
 
 public class Producer : Entity
 {

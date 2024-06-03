@@ -1,6 +1,6 @@
-﻿using Domain.ConsumerModel;
+﻿using Domain.AggregatesModel.CostumerModel;
 
-namespace Domain.Common;
+namespace Domain.AggregatesModel.Common;
 
 public class Review : Entity
 {
