@@ -10,5 +10,5 @@ public class User : Entity
     public DateTime BirthDate { get; init; }
     public int Type { get; init; }
     public DateTime CreatedAt { get; init; }
-    public DateTime UpdatedAt { get; init; }
+    public DateTime? UpdatedAt { get; init; }
 }

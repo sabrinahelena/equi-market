@@ -19,6 +19,7 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
         builder.Property(x => x.Name)
             .HasMaxLength(100)
             .IsRequired();
+
         builder.Property(x => x.Description).HasMaxLength(500);
         builder.Property(x => x.Materials).HasMaxLength(150);
         builder.Property(x => x.Origin).HasMaxLength(40);
