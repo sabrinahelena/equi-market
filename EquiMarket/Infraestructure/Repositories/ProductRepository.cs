@@ -30,12 +30,12 @@ public class ProductRepository(IEquiMarketContext context) : IProductRepository
 
     public async Task<List<Product>> GetAllByProducerId(int producerId, CancellationToken cancellationToken = default)
     {
-        return await _context.Products.Where(x => x.ProducerId == producerId).ToListAsync(cancellationToken);
+        return await _context.Products.AsNoTracking().Where(x => x.ProducerId == producerId).ToListAsync(cancellationToken);
     }
 
     public async Task<Product> GetById(int id, CancellationToken cancellationToken = default)
     {
-        return await _context.Products.Where(x => x.Id == id).FirstAsync(cancellationToken);
+        return await _context.Products.AsNoTracking().Where(x => x.Id == id).FirstAsync(cancellationToken);
     }
 
     public async Task Update(Product product, CancellationToken cancellationToken = default)
