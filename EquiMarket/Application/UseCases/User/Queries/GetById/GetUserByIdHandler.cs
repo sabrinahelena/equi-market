@@ -10,7 +10,7 @@ public class GetUserbyIdHandler(IUserRepository repository) : IRequestHandler<Ge
 
     public async Task<GetUserByIdResponse> Handle(GetUserByIdQuery request, CancellationToken cancellationToken)
     {
-        var user = await _repository.GetByIdAndType(request.UserId, request.Type, cancellationToken);
-        return new GetUserByIdResponse(user.Map());
+        var user = await _repository.GetByIdAndType(request.UserId, request.UserType, cancellationToken);
+        return new GetUserByIdResponse(user?.Map());
     }
 }

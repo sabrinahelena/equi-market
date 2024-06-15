@@ -10,7 +10,7 @@ public class GetProductByIdHandler(IProductRepository repository) : IRequestHand
 
     public async Task<GetProductByIdResponse> Handle(GetProductByIdQuery request, CancellationToken cancellationToken)
     {
-        var result = await _repository.GetById(request.Id, cancellationToken);
-        return new GetProductByIdResponse(result.Map());
+        var result = await _repository.GetById(request.ProductId, cancellationToken);
+        return new GetProductByIdResponse(result?.Map());
     }
 }

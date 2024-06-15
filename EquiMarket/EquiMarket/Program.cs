@@ -21,6 +21,7 @@ namespace EquiMarket
             builder.Services.AddTransient<ICostumerRepository, CostumerRepository>();
             builder.Services.AddTransient<IProducerRepository, ProducerRepository>();
             builder.Services.AddTransient<IProductRepository, ProductRepository>();
+            builder.Services.AddTransient<ITransactionRepository, TransactionRepository>();
 
             builder.Services.AddDbContext<IEquiMarketContext, EquiMarketContext>(opt => opt.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=EquiMarket;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False"));
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

@@ -2,4 +2,7 @@
 
 namespace Application.UseCases.Producer.Products.Queries.GetAllByProducerId;
 
-public record GetAllProductsByProducerIdQuery(int ProducerId) : IRequest<GetAllProductsByProducerIdResponse>;
+public class GetAllProductsByProducerIdQuery : IRequest<GetAllProductsByProducerIdResponse>
+{
+    public int ProducerId { get; set; }
+} 

@@ -2,4 +2,8 @@
 
 namespace Application.UseCases.User.Queries.GetById;
 
-public record GetUserByIdQuery(int UserId, int Type) : IRequest<GetUserByIdResponse>;
+public class GetUserByIdQuery : IRequest<GetUserByIdResponse>
+{
+    public int UserId { get; set; }
+    public int UserType { get; set; }
+}
