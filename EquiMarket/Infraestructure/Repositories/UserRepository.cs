@@ -26,9 +26,9 @@ public class UserRepository(IEquiMarketContext context) : IUserRepository
         return _context.Users.ToListAsync(cancellationToken);
     }
 
-    public Task<User> GetByIdAndType(int id, int type, CancellationToken cancellationToken = default)
+    public Task<User?> GetByIdAndType(int id, int type, CancellationToken cancellationToken = default)
     {
-        return _context.Users.Where(x => x.Id == id && x.Type == type).FirstAsync(cancellationToken);
+        return _context.Users.Where(x => x.Id == id && x.Type == type).FirstOrDefaultAsync(cancellationToken);
     }
 
     public Task<User> GetById(int id, CancellationToken cancellationToken = default)

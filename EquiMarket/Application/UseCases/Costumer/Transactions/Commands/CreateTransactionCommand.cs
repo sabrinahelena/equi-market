@@ -10,9 +10,9 @@ public class CreateTransactionCommand : TransactionDto, IRequest<CreateTransacti
     public new int Id { get; set; }
 
     [JsonIgnore]
-    public new int CostumerId { get; init; }
+    public new int CostumerId { get; set; }
 
     [JsonIgnore]
-    public new int ProductId { get; init; }
+    public new int ProductId { get; set; }
 
 }
