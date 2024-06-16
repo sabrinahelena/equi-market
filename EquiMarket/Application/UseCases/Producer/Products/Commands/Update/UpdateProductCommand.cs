@@ -7,5 +7,5 @@ namespace Application.UseCases.Producer.Products.Commands.Update;
 public class UpdateProductCommand : ProductDto, IRequest<UpdateProductResponse>
 {
     [JsonIgnore]
-    public int ProductId { get; set; }
+    public new int ProductId { get; set; }
 }

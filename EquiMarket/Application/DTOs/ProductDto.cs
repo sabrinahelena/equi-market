@@ -1,9 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace Application.DTOs;
 
 public class ProductDto
 {
+    public int? ProductId { get; set; }
     [Required]
     public int ProducerId { get; set; }
 

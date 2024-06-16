@@ -7,5 +7,8 @@ namespace Application.UseCases.Producer.Products.Commands.Create;
 public class CreateProductCommand : ProductDto, IRequest<CreateProductResponse>
 {
     [JsonIgnore]
+    public new int? ProductId { get; set; }
+
+    [JsonIgnore]
     public new int ProducerId { get; set; }
 }
