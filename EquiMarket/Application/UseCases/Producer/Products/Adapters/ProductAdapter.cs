@@ -42,6 +42,7 @@ public static class ProductAdapter
     {
         return new ProductDto
         {
+            ProductId = product.Id,
             Description = product.Description,
             Name = product.Name,
             Materials = product.Materials,
